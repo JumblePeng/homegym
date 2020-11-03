@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     paddingVertical: 10,
     paddingHorizontal: 30,
+    marginBottom: 10
   },
   appButtonContainer2: {
     elevation: 8,
@@ -50,6 +51,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     paddingVertical: 10,
     paddingHorizontal: 90,
+    marginBottom: 10
   },
   titleSection:{
     fontSize: 24,

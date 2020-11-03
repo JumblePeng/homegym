@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons'
 
 import HomeScreen from './HomeScreen'
 import Navigator from './Navigator'
-import Calendar from './Calendar'
+import CalendarTask from './CalendarTask'
 import Profile from './Profile'
 
 const RootStack = createBottomTabNavigator()
@@ -38,7 +38,7 @@ export default class AppScreen extends Component {
         initialRouteName="Home">
           <RootStack.Screen name="Home" component={HomeScreen} />
           <RootStack.Screen name="Muscle Groups" component={Navigator} />
-          <RootStack.Screen name="Calendar" component={Calendar} />
+          <RootStack.Screen name="Calendar" component={CalendarTask} />
           <RootStack.Screen name="Profile" component={Profile} />
 
         </RootStack.Navigator>

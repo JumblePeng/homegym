@@ -1,11 +1,22 @@
 import React from 'react'
 import {View, Text, StyleSheet, TextInput} from 'react-native'
 import {Feather} from '@expo/vector-icons'
+import {Searchbar} from 'react-native-paper'
+
 
 const HomeSearchBar = props => {
+    const [searchQuery, setSearchQuery ] = React.useState('');
+    const onChangeSearch = query => setSearchQuery(query);
+    
     return(
-        <View style={styles.backgroundStyle}>
-            <Feather name='search' alignSelf = {"center"} size = {40} marginHorizontal = {10}/>
+        <Searchbar style={styles.backgroundStyle}
+            placeholder="Search"
+            onChangeText={onChangeSearch}
+            value={searchQuery}
+        />
+
+        /*<View style={styles.backgroundStyle}>
+            <Feather name='search' size = {32} />
             <TextInput
                 style={styles.inputStyle}
                 placeholder='Search'
@@ -16,7 +27,7 @@ const HomeSearchBar = props => {
                 autoCorrect={false}
                 onEndEditing={() => props.onDoneText()}
             />
-        </View>
+        </View>*/
     )
 }
 
@@ -32,28 +43,6 @@ const styles = StyleSheet.create({
         alignItems: "center",
         marginHorizontal: 10,
     },
-    inputStyle:{
-        fontSize: 28,
-        flex: 1
-    },
 })
 
 export default HomeSearchBar
-
-/*import React from 'react';
-import {View, Text, ImageBackground, StyleSheet} from 'react-native'
-
-export default function HomeSearchBar() {
-    return(<View>
-        
-    </View>)
-}
-
-const styles = StyleSheet.create(
-    {
-        SearchBar:{
-            height: 43,
-            width: 343,
-        }
-    }
-)*/
