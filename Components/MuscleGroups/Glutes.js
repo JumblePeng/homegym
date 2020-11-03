@@ -6,17 +6,7 @@ import { Ionicons } from '@expo/vector-icons'
 export default class Glutes extends Component {
     render(){
         return(
-        <View style={styles.container}>
-            <TouchableOpacity
-                    onPress={()=>this.props.navigation.goBack()}
-                >
-                    <Ionicons
-                        name="ios-arrow-round-back"
-                        size = {70}
-                    />
-            </TouchableOpacity>
-
-            <Text style={styles.titleSection}> Glutes </Text>
+        <View>
         </View>
         );
     }
