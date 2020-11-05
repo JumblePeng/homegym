@@ -8,11 +8,11 @@ export default class Forearms extends Component {
         return(
         <View>
             <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Forearm1")}>
-              <Text style={styles.titleSection}> Forearm1 </Text>
+              <Text style={styles.titleSection}> Farmers Carry </Text>
             </TouchableOpacity>
 
             <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Forearm2")}>
-              <Text style={styles.titleSection}> Forearm2 </Text>
+              <Text style={styles.titleSection}> Wrist Flexion </Text>
             </TouchableOpacity>
         </View>
         );
