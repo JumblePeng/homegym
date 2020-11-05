@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Header from '../Components/HomeScreen/Header'
 import HomeSearchBar from  './HomeScreen/HomeSearchBar'
@@ -10,6 +10,7 @@ export default class HomeScreen extends Component {
         <View style={styles.container}>
             <Header/>
             <HomeSearchBar/>
+
             <TouchableOpacity 
               onPress = {()=> this.props.navigation.navigate("Muscle Groups")}
               style={styles.appButtonContainer1}
@@ -39,16 +40,18 @@ const styles = StyleSheet.create({
   appButtonContainer1: {
     elevation: 8,
     backgroundColor: "#009688",
-    borderRadius: 10,
+    borderRadius: 15,
     paddingVertical: 10,
-    paddingHorizontal: 12
+    paddingHorizontal: 30,
+    marginBottom: 10
   },
   appButtonContainer2: {
     elevation: 8,
     backgroundColor: "#8B83BE",
-    borderRadius: 10,
+    borderRadius: 15,
     paddingVertical: 10,
-    paddingHorizontal: 71
+    paddingHorizontal: 90,
+    marginBottom: 10
   },
   titleSection:{
     fontSize: 24,

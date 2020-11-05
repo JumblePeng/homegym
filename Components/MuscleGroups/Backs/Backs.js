@@ -6,17 +6,18 @@ import { Ionicons } from '@expo/vector-icons'
 export default class Back extends Component {
     render(){
         return(
-        <View style={styles.container}>
-            <TouchableOpacity
-                    onPress={()=>this.props.navigation.goBack()}
-                >
-                    <Ionicons
-                        name="ios-arrow-round-back"
-                        size = {70}
-                    />
+        <View>
+            <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Back1")}>
+              <Text style={styles.titleSection}> Back1 </Text>
             </TouchableOpacity>
 
-            <Text style={styles.titleSection}> Back </Text>
+            <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Back2")}>
+              <Text style={styles.titleSection}> Back2 </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Back3")}>
+              <Text style={styles.titleSection}> Back3 </Text>
+            </TouchableOpacity>
         </View>
         );
     }

@@ -16,7 +16,11 @@ export default class Profile extends Component {
                     />
             </TouchableOpacity>
 
-            <Text style={styles.titleSection}> Profile </Text>
+            <Text style={styles.titleSection}> Account </Text>
+
+            <Text style={styles.headerSection}> Account Information </Text>
+
+            <Text style={styles.headerSection}> Settings and Notifications </Text>
         </View>
         );
     }
@@ -29,6 +33,11 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
     },
     titleSection:{
-        fontSize: 30,
+        fontSize: 35,
+        marginBottom: 10,
+    },
+    headerSection:{
+        fontSize: 25,
+        marginBottom: 10,
     }
 })

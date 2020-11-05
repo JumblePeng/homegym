@@ -6,17 +6,18 @@ import { Ionicons } from '@expo/vector-icons'
 export default class Biceps extends Component {
     render(){
         return(
-        <View style={styles.container}>
-            <TouchableOpacity
-                    onPress={()=>this.props.navigation.goBack()}
-                >
-                    <Ionicons
-                        name="ios-arrow-round-back"
-                        size = {70}
-                    />
+        <View>
+            <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Bicep1")}>
+              <Text style={styles.titleSection}> Bicep1 </Text>
             </TouchableOpacity>
 
-            <Text style={styles.titleSection}> Biceps </Text>
+            <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Bicep2")}>
+              <Text style={styles.titleSection}> Bicep2 </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Bicep3")}>
+              <Text style={styles.titleSection}> Bicep3 </Text>
+            </TouchableOpacity>
         </View>
         );
     }

@@ -4,11 +4,9 @@ import { NavigationContainer } from '@react-navigation/native'
 import { Ionicons } from '@expo/vector-icons'
 
 import HomeScreen from './HomeScreen'
-import MuscleGroupScreen from './MuscleGroupScreen'
-import Calendar from './Calendar'
+import Navigator from './Navigator'
+import CalendarTask from './CalendarTask'
 import Profile from './Profile'
-
-import Abdominals from './MuscleGroups/Abdominals'
 
 const RootStack = createBottomTabNavigator()
 
@@ -29,21 +27,19 @@ export default class AppScreen extends Component {
               }else if(route.name === "Profile"){
                 iconName = "ios-contact"
               }
-              return <Ionicons name = {iconName} size={size} color={color} />
+              return <Ionicons name = {iconName} size={size} color={color} /> 
             },
         })}
         
-        tabBarOptions = {{
-          activeTintColor: 'blue',
-          inactiveTintColor: 'gray'
+        tabBarOptions = {{ // can use this to edit top name and set arrow colors, etc
+          activeTintColor: 'blue', // find wrappers for custom fonts to load from assets folder
+          inactiveTintColor: 'gray' //supernova 
         }}
         initialRouteName="Home">
           <RootStack.Screen name="Home" component={HomeScreen} />
-          <RootStack.Screen name="Muscle Groups" component={MuscleGroupScreen} />
-          <RootStack.Screen name="Calendar" component={Calendar} />
+          <RootStack.Screen name="Muscle Groups" component={Navigator} />
+          <RootStack.Screen name="Calendar" component={CalendarTask} />
           <RootStack.Screen name="Profile" component={Profile} />
-
-          <RootStack.Screen name="Abdominals" component={Abdominals} />
 
         </RootStack.Navigator>
       </NavigationContainer>
