@@ -1,9 +1,6 @@
 import React, {Component, useState, useCallback, useRef} from 'react';
 import {View, Text, StyleSheet, Alert, Button} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import ReactPlayer from "react-player"
-import YouTube from 'react-native-youtube';
-import WebView from 'react-native-webview';
 import YoutubePlayer from "react-native-youtube-iframe";
 
 export default function App() {

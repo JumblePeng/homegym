@@ -5,10 +5,11 @@ import { NavigationContainer } from '@react-navigation/native'
 import MuscleGroupScreen from './MuscleGroupScreen'
 import Abdominals from './MuscleGroups/Abdominals/Abdominals'
 import Back from './MuscleGroups/Backs/Backs'
-import Biceps from './MuscleGroups/Biceps/Biceps'
-import Forearms from './MuscleGroups/Forearms/Forearms'
+import Arms from './MuscleGroups/Arms/Arms'
 import Glutes from './MuscleGroups/Glutes/Glutes'
 import Shoulders from './MuscleGroups/Shoulders/Shoulders'
+import Chests from './MuscleGroups/Chest/Chests'
+import Legs from './MuscleGroups/Legs/Legs'
 
 import Ab1 from './MuscleGroups/Abdominals/Ab1'
 import Ab2 from './MuscleGroups/Abdominals/Ab2'
@@ -18,12 +19,11 @@ import Back1 from './MuscleGroups/Backs/Back1'
 import Back2 from './MuscleGroups/Backs/Back2'
 import Back3 from './MuscleGroups/Backs/Back3'
 
-import Bicep1 from './MuscleGroups/Biceps/Bicep1'
-import Bicep2 from './MuscleGroups/Biceps/Bicep2'
-import Bicep3 from './MuscleGroups/Biceps/Bicep3'
-
-import Forearm1 from './MuscleGroups/Forearms/Forearm1'
-import Forearm2 from './MuscleGroups/Forearms/Forearm2'
+import Bicep1 from './MuscleGroups/Arms/Bicep1'
+import Bicep2 from './MuscleGroups/Arms/Bicep2'
+import Bicep3 from './MuscleGroups/Arms/Bicep3'
+import Forearm1 from './MuscleGroups/Arms/Forearm1'
+import Forearm2 from './MuscleGroups/Arms/Forearm2'
 
 import Glute1 from './MuscleGroups/Glutes/Glute1'
 import Glute2 from './MuscleGroups/Glutes/Glute2'
@@ -42,10 +42,11 @@ export default class Navigator extends Component {
                     <RootStack.Screen name="MuscleGroupScreen" component = {MuscleGroupScreen} options={{ title: 'Muscle Groups'}} />
                     <RootStack.Screen name="Abdominals" component={Abdominals}/>
                     <RootStack.Screen name="Back" component={Back} />
-                    <RootStack.Screen name="Biceps" component={Biceps} />
-                    <RootStack.Screen name="Forearms" component={Forearms} />
+                    <RootStack.Screen name="Arms" component={Arms} />
                     <RootStack.Screen name="Glutes" component={Glutes} />
                     <RootStack.Screen name="Shoulders" component={Shoulders} />
+                    <RootStack.Screen name="Chests" component={Chests} />
+                    <RootStack.Screen name="Legs" component={Legs} />
 
                     <RootStack.Screen name="Ab1" component={Ab1} />
                     <RootStack.Screen name="Ab2" component={Ab2} />
@@ -58,7 +59,6 @@ export default class Navigator extends Component {
                     <RootStack.Screen name="Bicep1" component={Bicep1} />
                     <RootStack.Screen name="Bicep2" component={Bicep2} />
                     <RootStack.Screen name="Bicep3" component={Bicep3} />
-
                     <RootStack.Screen name="Forearm1" component={Forearm1} />
                     <RootStack.Screen name="Forearm2" component={Forearm2} />
                     

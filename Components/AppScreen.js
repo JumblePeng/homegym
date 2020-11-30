@@ -13,7 +13,6 @@ const RootStack = createBottomTabNavigator()
 export default class AppScreen extends Component {
   render() {
     return(
-      <NavigationContainer>
         <RootStack.Navigator 
         screenOptions={({route})=>({
             tabBarIcon: ({color, size})=>{
@@ -42,7 +41,6 @@ export default class AppScreen extends Component {
           <RootStack.Screen name="Profile" component={Profile} />
 
         </RootStack.Navigator>
-      </NavigationContainer>
     );
   }
 }

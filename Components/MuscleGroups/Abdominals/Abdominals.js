@@ -1,11 +1,21 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet,Image} from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import { Ionicons } from '@expo/vector-icons'
 
 export default class Abdominals extends Component {
     render(){
         return(
-        <View>
+        <ScrollView>
+            <TouchableOpacity
+                    onPress={()=>this.props.navigation.goBack()}
+                >
+                    <Ionicons
+                        name="ios-arrow-round-back"
+                        size = {70}
+                    />
+            </TouchableOpacity>
+
             <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Ab1")}>
               <Text style={styles.titleSection}> Plank </Text>
               <Image source={require("../Abdominals/ab1.jpeg")}>
@@ -20,7 +30,7 @@ export default class Abdominals extends Component {
               <Text style={styles.titleSection}> Mountain Climbers </Text>
               <Image source={require("../Abdominals/ab3.jpg")} style={styles.Image}></Image>
             </TouchableOpacity>
-        </View>
+        </ScrollView>
         );
     }
 }
