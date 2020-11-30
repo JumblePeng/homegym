@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Text } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import { Ionicons } from '@expo/vector-icons'
+import {StyleSheet, View, Text, Image, Dimensions } from 'react-native';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
+import { Ionicons } from '@expo/vector-icons';
 
 export default class MuscleGroupScreen extends Component {
     render(){
         return(
-            <View>
+            <ScrollView>
                 <TouchableOpacity
                     onPress={()=>this.props.navigation.goBack()}
                 >
@@ -17,105 +17,49 @@ export default class MuscleGroupScreen extends Component {
                 </TouchableOpacity>
             
                 <TouchableOpacity
-                    onPress={()=>this.props.navigation.navigate("Abdominals")}
-                    style={{elevation: 8,
-                        borderRadius: 10,
-                        paddingVertical: 10,
-                        paddingHorizontal: 12,
-                        backgroundColor: "#BC3535",
-                        marginBottom: 10}}
-                >
-                    <View>
-                        <Text style={{fontSize: 30}}> Abdominals </Text>
-                    </View>
+                    onPress={()=>this.props.navigation.navigate("Abdominals")}>
+                    <Image style={{marginBottom: 15}} source={require("../assets/Abs.png")}>
+                    </Image>
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    onPress={()=>this.props.navigation.navigate("Back")}
-                    style={{elevation: 8,
-                        borderRadius: 10,
-                        paddingVertical: 10,
-                        paddingHorizontal: 12,
-                        backgroundColor: '#8B83BE',
-                        marginBottom: 10}}
-                >
-                    <View>
-                        <Text style={{fontSize: 30}}> Back </Text>
-                    </View>
+                    onPress={()=>this.props.navigation.navigate("Arms")}>
+                    <Image marginBottom={15} source={require("../assets/Arms.png")}>
+                    </Image>
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    onPress={()=>this.props.navigation.navigate("Biceps")}
-                    style={{elevation: 8,
-                        borderRadius: 10,
-                        paddingVertical: 10,
-                        paddingHorizontal: 12,
-                        backgroundColor: '#3DB42A',
-                        marginBottom: 10}}
-                >
-                    <View>
-                        <Text style={{fontSize: 30}}> Biceps </Text>
-                    </View>
+                    onPress={()=>this.props.navigation.navigate("Back")}>
+                    <Image marginBottom={15} source={require("../assets/Back.png")}>
+                    </Image>
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    onPress={()=>this.props.navigation.navigate("Forearms")}
-                    style={{elevation: 8,
-                        borderRadius: 10,
-                        paddingVertical: 10,
-                        paddingHorizontal: 12,
-                        backgroundColor: '#60A98F',
-                        marginBottom: 10}}
-                >
-                    <View>
-                        <Text style={{fontSize: 30}}> Forearms </Text>
-                    </View>
+                    onPress={()=>this.props.navigation.navigate("Chests")}>
+                    <Image marginBottom={15} source={require("../assets/Chest.png")}>
+                    </Image>
+                </TouchableOpacity>
+
+
+                <TouchableOpacity
+                    onPress={()=>this.props.navigation.navigate("Glutes")}>
+                    <Image marginBottom={15} source={require("../assets/Glutes.png")}>
+                    </Image>
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    onPress={()=>this.props.navigation.navigate("Glutes")}
-                    style={{elevation: 8,
-                        borderRadius: 10,
-                        paddingVertical: 10,
-                        paddingHorizontal: 12,
-                        backgroundColor: '#F4E0E0',
-                        marginBottom: 10}}
-                >
-                    <View>
-                        <Text style={{fontSize: 30}}> Glutes </Text>
-                    </View>
+                    onPress={()=>this.props.navigation.navigate("Legs")}>
+                    <Image marginBottom={15} source={require("../assets/Legs.png")}>
+                    </Image>
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                    onPress={()=>this.props.navigation.navigate("Shoulders")}
-                    style={{elevation: 8,
-                        borderRadius: 10,
-                        paddingVertical: 10,
-                        paddingHorizontal: 12,
-                        backgroundColor: '#CACD20',
-                        marginBottom: 10}}
-                >
-                    <View>
-                        <Text style={{fontSize: 30}}> Shoulders </Text>
-                    </View>
+                    onPress={()=>this.props.navigation.navigate("Shoulders")}>
+                    <Image marginBottom={15} source={require("../assets/Shoulders.png")}>
+                    </Image>
                 </TouchableOpacity>
 
-            </View>
+            </ScrollView>
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: 'blue',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    appButtonContainer: {
-        elevation: 8,
-        borderRadius: 10,
-        paddingVertical: 10,
-        paddingHorizontal: 12,
-    }
-})
