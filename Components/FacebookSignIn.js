@@ -4,6 +4,7 @@ import * as Facebook from 'expo-facebook';
 import * as SecureStore from 'expo-secure-store';
 import LoadingScreen from './LoadingScreen'
 import AppScreen from './AppScreen'
+import GoogleSignIn from './GoogleSignIn'
 
 import {FontAwesome} from '@expo/vector-icons'
 import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -16,7 +17,7 @@ export default class FacebookSignIn extends Component {
   }
 
   componentDidMount(){
-   setTimeout (()=>{this.checkForToken()}, 1000)
+   setTimeout (()=>{this.checkForToken()}, 0)
   }
 
 
@@ -45,18 +46,12 @@ export default class FacebookSignIn extends Component {
       return(<LoadingScreen/>)
     }else if(this.state.token === null){
     return (
-        <View style={styles.container}>
-            <Text style={{fontSize: 35, marginBottom: 400, fontFamily: "OpenSans-Reg", color: "#FFFFFF"}}> Connection </Text>
-
+        <View>
             <FontAwesome.Button name = "facebook" backgroundColor = "#3b5998" onPress={() => this.logIn()}>
               Sign in with Facebook
             </FontAwesome.Button>
 
-            <TouchableOpacity 
-              onPress = {()=> this.props.navigation.replace("AppScreen")}
-            >
-              <Text style={{color: "#FBDF00", marginTop: 20}}> or Continue as Guest </Text>
-            </TouchableOpacity>
+            <GoogleSignIn/>
         </View>
         
       );

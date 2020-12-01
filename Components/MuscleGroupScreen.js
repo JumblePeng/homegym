@@ -6,16 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 export default class MuscleGroupScreen extends Component {
     render(){
         return(
-            <ScrollView>
-                <TouchableOpacity
-                    onPress={()=>this.props.navigation.goBack()}
-                >
-                    <Ionicons
-                        name="ios-arrow-round-back"
-                        size = {70}
-                    />
-                </TouchableOpacity>
-            
+            <ScrollView contentContainerStyle={{ alignItems: 'center' }}>            
                 <TouchableOpacity
                     onPress={()=>this.props.navigation.navigate("Abdominals")}>
                     <Image style={{marginBottom: 15}} source={require("../assets/Abs.png")}>

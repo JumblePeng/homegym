@@ -33,6 +33,20 @@ import Shoulder1 from './MuscleGroups/Shoulders/Shoulder1'
 import Shoulder2 from './MuscleGroups/Shoulders/Shoulder2'
 import Shoulder3 from './MuscleGroups/Shoulders/Shoulder3'
 
+import Chest1 from './MuscleGroups/Chest/Chest1'
+import Chest2 from './MuscleGroups/Chest/Chest2'
+import Chest3 from './MuscleGroups/Chest/Chest3'
+import Chest4 from './MuscleGroups/Chest/Chest4'
+import Chest5 from './MuscleGroups/Chest/Chest5'
+import Chest6 from './MuscleGroups/Chest/Chest6'
+
+import Leg1 from './MuscleGroups/Legs/Leg1'
+import Leg2 from './MuscleGroups/Legs/Leg2'
+import Leg3 from './MuscleGroups/Legs/Leg3'
+import Leg4 from './MuscleGroups/Legs/Leg4'
+import Leg5 from './MuscleGroups/Legs/Leg5'
+import Leg6 from './MuscleGroups/Legs/Leg6'
+
 const RootStack = createStackNavigator()
 
 export default class Navigator extends Component {
@@ -69,6 +83,21 @@ export default class Navigator extends Component {
                     <RootStack.Screen name="Shoulder1" component={Shoulder1} />
                     <RootStack.Screen name="Shoulder2" component={Shoulder2} />
                     <RootStack.Screen name="Shoulder3" component={Shoulder3} />
+
+
+                    <RootStack.Screen name="Chest1" component={Chest1} />
+                    <RootStack.Screen name="Chest2" component={Chest2} />
+                    <RootStack.Screen name="Chest3" component={Chest3} />
+                    <RootStack.Screen name="Chest4" component={Chest4} />
+                    <RootStack.Screen name="Chest5" component={Chest5} />
+                    <RootStack.Screen name="Chest6" component={Chest6} />
+
+                    <RootStack.Screen name="Leg1" component={Leg1} />
+                    <RootStack.Screen name="Leg2" component={Leg2} />
+                    <RootStack.Screen name="Leg3" component={Leg3} />
+                    <RootStack.Screen name="Leg4" component={Leg4} />
+                    <RootStack.Screen name="Leg5" component={Leg5} />
+                    <RootStack.Screen name="Leg6" component={Leg6} />
                 </RootStack.Navigator>
         );
     }
