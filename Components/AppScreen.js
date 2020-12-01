@@ -38,9 +38,10 @@ export default class AppScreen extends Component {
           <RootStack.Screen name="Home" component={HomeScreen} />
           <RootStack.Screen name="Muscle Groups" component={Navigator} />
           <RootStack.Screen name="Calendar" component={CalendarTask} />
-          <RootStack.Screen name="Profile" component={Profile} />
 
         </RootStack.Navigator>
     );
   }
 }
+
+//<RootStack.Screen name="Profile" component={Profile} />
