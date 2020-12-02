@@ -34,22 +34,29 @@ export default class Shoulders extends Component {
             </Image>
             </TouchableOpacity>
 
+            <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Shoulder4")}>
+              <Text style={styles.titleSection}> Medium Grip Pull-up </Text>
+              <Image source={require("../Shoulders/shoulder4.png")}>
+            </Image>
+            </TouchableOpacity>
         </ScrollView>
         );
     }
 }
 
+
 const styles = StyleSheet.create({
-    container:{
-        flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
-    },
-    titleSection:{
-        fontSize: 30,
-    },
-    shoulder1: {
-      width: 50,
-      height: 50,
-    },
+  container:{
+      flex: 1,
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+  },
+  titleSection:{
+      fontSize: 20,
+      fontFamily: 'OpenSans-SemiBold'
+  },
+  Image:{
+    height:170,
+    width:170
+  }
 })

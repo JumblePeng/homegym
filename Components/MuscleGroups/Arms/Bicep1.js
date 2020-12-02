@@ -1,9 +1,11 @@
 import React, {Component, useState, useCallback, useRef} from 'react';
 import {View, Text, StyleSheet, Alert, Button} from 'react-native'
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import YoutubePlayer from "react-native-youtube-iframe";
+import { Ionicons } from '@expo/vector-icons';
 
-export default function App() {
+
+export default function App({navigation}) {
     const [playing, setPlaying] = useState(false);
   
     const onStateChange = useCallback((state) => {
@@ -18,14 +20,35 @@ export default function App() {
     }, []);
   
     return (
-      <View>
+      <ScrollView>
+        <View style={{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
+          <TouchableOpacity
+                    onPress={()=>navigation.goBack()}
+                >
+                    <Ionicons
+                        name="ios-arrow-round-back"
+                        size = {70}
+                        color = "blue"
+                    />
+            </TouchableOpacity>
+            <Text style={{fontSize: 30, fontFamily: "OpenSans-Bold"}}> Chin-Up </Text>
+            </View>
+
         <YoutubePlayer
-          height={300}
+          height={200}
           play={playing}
           videoId={"b-ztMQpj8yc"}
           onChangeState={onStateChange}
         />
-        <Button title={playing ? "pause" : "play"} onPress={togglePlaying} />
-      </View>
+
+        <Text style={{fontFamily: "OpenSans-SemiBold", fontSize: 20}}> Equipments </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> Pull-Up Bar, Monkey Bar, etc. </Text>
+        <Text style={{fontFamily: "OpenSans-SemiBold", fontSize: 20, marginTop: 10}}> Instructions </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 1. Grab onto the bar with your palms facing towards your face. </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 2. Fully extend your arms, keeping your legs completely straight, ensuring they don't touch the floor </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 3. Pull yourself up until your chin is slightly above the bar </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 4. Bring yourself back down, fully extending your arms </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 5. Repeat </Text>
+      </ScrollView>
     );
   }
