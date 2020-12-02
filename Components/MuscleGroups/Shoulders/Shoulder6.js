@@ -30,23 +30,22 @@ export default function App({navigation}) {
                         color = "blue"
                     />
             </TouchableOpacity>
-            <Text style={{fontSize: 22, fontFamily: "OpenSans-Bold"}}> Medium Grip Pull-Up </Text>
+            <Text style={{fontSize: 22, fontFamily: "OpenSans-Bold"}}> Standing Shrugs </Text>
             </View>
 
         <YoutubePlayer
           height={200}
           play={playing}
-          videoId={"3VcKaXpzqRo"}
+          videoId={"cJRVVxmytaM"}
           onChangeState={onStateChange}
         />
         <Text style={{fontFamily: "OpenSans-SemiBold", fontSize: 20}}> Equipments </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> Pull-up bar, Monkey Bar, etc </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> Two heavy weights (backpacks with textbooks etc.) </Text>
         <Text style={{fontFamily: "OpenSans-SemiBold", fontSize: 20, marginTop: 10}}> Instructions </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 1. Grab onto the bar with your palms facing away your face, making a 90 degree angle between your hands and shoulder </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 2. Fully extend your arms, ensuring your legs are completely straight, not touching the floor </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 3. Pull yourself up until your chin is slightly above the bar </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 4. Bring yourself back down, fully extending your arms </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 5. Repeat </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 1. Stand straight up with weights in both hands </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 2. Shrug your shoulders, raising the weights slightly and hold for 3 seconds </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 3. Slowly bring the weights back by your sides </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 4. Repeat </Text>
       </ScrollView>
     );
   }

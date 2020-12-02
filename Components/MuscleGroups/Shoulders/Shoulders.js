@@ -35,8 +35,20 @@ export default class Shoulders extends Component {
             </TouchableOpacity>
 
             <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Shoulder4")}>
-              <Text style={styles.titleSection}> Medium Grip Pull-up </Text>
+              <Text style={styles.titleSection}> Hindu Pushup </Text>
               <Image source={require("../Shoulders/shoulder4.png")}>
+            </Image>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Shoulder5")}>
+              <Text style={styles.titleSection}> Front Raise </Text>
+              <Image source={require("../Shoulders/shoulder5.jpg")}>
+            </Image>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Shoulder6")}>
+              <Text style={styles.titleSection}> Standing Shrugs </Text>
+              <Image source={require("../Shoulders/shoulder6.png")}>
             </Image>
             </TouchableOpacity>
         </ScrollView>

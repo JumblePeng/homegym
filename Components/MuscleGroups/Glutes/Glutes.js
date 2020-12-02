@@ -35,6 +35,21 @@ export default class Chests extends Component {
               <Image source={require("../Glutes/glute3.png")}>
             </Image>
             </TouchableOpacity>
+            <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Glute4")}>
+              <Text style={styles.titleSection}> Donkey Kick </Text>
+              <Image source={require("../Glutes/glute4.jpg")}>
+            </Image>
+            </TouchableOpacity>
+            <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Glute5")}>
+              <Text style={styles.titleSection}> Clamshell </Text>
+              <Image source={require("../Glutes/glute5.jpg")}>
+            </Image>
+            </TouchableOpacity>
+            <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Glute6")}>
+              <Text style={styles.titleSection}> Side Lying Leg Lift </Text>
+              <Image source={require("../Glutes/glute6.png")}>
+            </Image>
+            </TouchableOpacity>
         </ScrollView>
         );
     }
