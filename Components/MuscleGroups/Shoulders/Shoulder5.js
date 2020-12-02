@@ -30,23 +30,22 @@ export default function App({navigation}) {
                         color = "blue"
                     />
             </TouchableOpacity>
-            <Text style={{fontSize: 22, fontFamily: "OpenSans-Bold"}}> Medium Grip Pull-Up </Text>
+            <Text style={{fontSize: 22, fontFamily: "OpenSans-Bold"}}> Front Raise </Text>
             </View>
 
         <YoutubePlayer
           height={200}
           play={playing}
-          videoId={"3VcKaXpzqRo"}
+          videoId={"sOcYlBI85hc"}
           onChangeState={onStateChange}
         />
         <Text style={{fontFamily: "OpenSans-SemiBold", fontSize: 20}}> Equipments </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> Pull-up bar, Monkey Bar, etc </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> Two moderate weights (milk gallons, food cans, etc) </Text>
         <Text style={{fontFamily: "OpenSans-SemiBold", fontSize: 20, marginTop: 10}}> Instructions </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 1. Grab onto the bar with your palms facing away your face, making a 90 degree angle between your hands and shoulder </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 2. Fully extend your arms, ensuring your legs are completely straight, not touching the floor </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 3. Pull yourself up until your chin is slightly above the bar </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 4. Bring yourself back down, fully extending your arms </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 5. Repeat </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 1. Stand straight up with weights in both hands in front of your thighs </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 2. Bring the weights up until your arms make a 90 degree angle with your body </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 3. Slowly lower the weights back in front of your thighs </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 4. Repeat </Text>
       </ScrollView>
     );
   }

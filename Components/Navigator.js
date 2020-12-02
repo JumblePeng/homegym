@@ -28,10 +28,16 @@ import Forearm2 from './MuscleGroups/Arms/Forearm2'
 import Glute1 from './MuscleGroups/Glutes/Glute1'
 import Glute2 from './MuscleGroups/Glutes/Glute2'
 import Glute3 from './MuscleGroups/Glutes/Glute3'
+import Glute4 from './MuscleGroups/Glutes/Glute4'
+import Glute5 from './MuscleGroups/Glutes/Glute5'
+import Glute6 from './MuscleGroups/Glutes/Glute6'
 
 import Shoulder1 from './MuscleGroups/Shoulders/Shoulder1'
 import Shoulder2 from './MuscleGroups/Shoulders/Shoulder2'
 import Shoulder3 from './MuscleGroups/Shoulders/Shoulder3'
+import Shoulder4 from './MuscleGroups/Shoulders/Shoulder4'
+import Shoulder5 from './MuscleGroups/Shoulders/Shoulder5'
+import Shoulder6 from './MuscleGroups/Shoulders/Shoulder6'
 
 import Chest1 from './MuscleGroups/Chest/Chest1'
 import Chest2 from './MuscleGroups/Chest/Chest2'
@@ -79,10 +85,16 @@ export default class Navigator extends Component {
                     <RootStack.Screen name="Glute1" component={Glute1} />
                     <RootStack.Screen name="Glute2" component={Glute2} />
                     <RootStack.Screen name="Glute3" component={Glute3} />
+                    <RootStack.Screen name="Glute4" component={Glute4} />
+                    <RootStack.Screen name="Glute5" component={Glute5} />
+                    <RootStack.Screen name="Glute6" component={Glute6} />
 
                     <RootStack.Screen name="Shoulder1" component={Shoulder1} />
                     <RootStack.Screen name="Shoulder2" component={Shoulder2} />
                     <RootStack.Screen name="Shoulder3" component={Shoulder3} />
+                    <RootStack.Screen name="Shoulder4" component={Shoulder4} />
+                    <RootStack.Screen name="Shoulder5" component={Shoulder5} />
+                    <RootStack.Screen name="Shoulder6" component={Shoulder6} />
 
 
                     <RootStack.Screen name="Chest1" component={Chest1} />
