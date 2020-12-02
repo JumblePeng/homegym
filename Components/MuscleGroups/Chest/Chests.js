@@ -1,12 +1,25 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet,Image} from 'react-native'
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
-import { Ionicons } from '@expo/vector-icons'
+import { Ionicons } from '@expo/vector-icons';
 
 export default class Chests extends Component {
     render(){
         return(
-        <ScrollView contentContainerStyle={{ alignItems: 'center' }}>
+        <ScrollView>
+          <View style={{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
+          <TouchableOpacity
+                    onPress={()=>this.props.navigation.goBack()}
+                >
+                    <Ionicons
+                        name="ios-arrow-round-back"
+                        size = {70}
+                        color = "blue"
+                    />
+            </TouchableOpacity>
+            <Text style={{fontSize: 30, fontFamily: "OpenSans-Bold"}}> Chest Workouts </Text>
+            </View>
+
             <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Chest1")}>
               <Text style={styles.titleSection}> Push-Ups </Text>
               <Image source={require("../Chest/pushup.jpg")}>

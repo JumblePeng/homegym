@@ -6,7 +6,20 @@ import { Ionicons } from '@expo/vector-icons'
 export default class Legs extends Component {
     render(){
         return(
-        <ScrollView  contentContainerStyle={{ alignItems: 'center' }}>
+        <ScrollView>
+            <View style={{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
+          <TouchableOpacity
+                    onPress={()=>this.props.navigation.goBack()}
+                >
+                    <Ionicons
+                        name="ios-arrow-round-back"
+                        size = {70}
+                        color = "blue"
+                    />
+            </TouchableOpacity>
+            <Text style={{fontSize: 30, fontFamily: "OpenSans-Bold"}}> Leg Workouts </Text>
+            </View>
+
             <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Leg1")}>
               <Text style={styles.titleSection}> Squat Jump </Text>
               <Image source={require("../Legs/squatjump.jpg")}>

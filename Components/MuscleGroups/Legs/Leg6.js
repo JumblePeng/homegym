@@ -2,9 +2,10 @@ import React, {Component, useState, useCallback, useRef} from 'react';
 import {View, Text, StyleSheet, Alert, Button} from 'react-native'
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import YoutubePlayer from "react-native-youtube-iframe";
+import { Ionicons } from '@expo/vector-icons';
 
 
-export default function App() {
+export default function App({navigation}) {
     const [playing, setPlaying] = useState(false);
   
     const onStateChange = useCallback((state) => {
@@ -20,13 +21,25 @@ export default function App() {
     
     return (
       <ScrollView>
+        <View style={{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
+          <TouchableOpacity
+                    onPress={()=>navigation.goBack()}
+                >
+                    <Ionicons
+                        name="ios-arrow-round-back"
+                        size = {70}
+                        color = "blue"
+                    />
+            </TouchableOpacity>
+            <Text style={{fontSize: 22, fontFamily: "OpenSans-Bold"}}> Bulgarian Split Squat </Text>
+            </View>
+
         <YoutubePlayer
           height={200}
           play={playing}
           videoId={"2C-uNgKwPLE"}
           onChangeState={onStateChange}
         />
-        <Text style={{fontFamily: "OpenSans-SemiBold", fontSize: 35, textAlign: 'center'}}> Bulgarian Split Squat </Text>
         <Text style={{fontFamily: "OpenSans-SemiBold", fontSize: 20}}> Equipments </Text>
         <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> Find a bench that you can rest your foot on </Text>
         <Text style={{fontFamily: "OpenSans-SemiBold", fontSize: 20, marginTop: 10}}> Instructions </Text>
