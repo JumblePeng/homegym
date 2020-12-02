@@ -16,13 +16,13 @@ export default class AgendaScreen extends Component {
         '2020-12-04': [{name: 'Glutes'}],
         '2020-12-06': [{name: 'Back'}],
         '2020-12-07': [{name: 'Biceps'}],
-        '2020-12-09': [{name: 'Forearms'}],
+        '2020-12-09': [{name: 'Chest'}],
         '2020-12-10': [{name: 'Abs'}],
         '2020-12-11': [{name: 'Shoulders'}],
         '2020-12-12': [{name: 'Glutes'}],
         '2020-12-14': [{name: 'Back'}],
         '2020-12-15': [{name: 'Biceps'}],
-        '2020-12-17': [{name: 'Forearms'}],
+        '2020-12-17': [{name: 'Chest'}],
         '2020-12-18': [{name: 'Abs'}],
         '2020-12-19': [{name: 'Shoulders'}],
         '2020-12-20': [{name: 'Glutes'}],
@@ -36,7 +36,7 @@ export default class AgendaScreen extends Component {
         '2021-01-04': [{name: 'Glutes'}],
         '2021-01-06': [{name: 'Back'}],
         '2021-01-07': [{name: 'Biceps'}],
-        '2021-01-09': [{name: 'Forearms'}],
+        '2021-01-09': [{name: 'Chest'}],
       }
     };
   }
