@@ -31,24 +31,24 @@ export default function App({navigation}) {
                         color = "blue"
                     />
             </TouchableOpacity>
-            <Text style={{fontSize: 30, fontFamily: "OpenSans-Bold"}}> Dolphin Kicks </Text>
+            <Text style={{fontSize: 30, fontFamily: "OpenSans-Bold"}}> Superman Hold  </Text>
             </View>
 
         <YoutubePlayer
           height={200}
           play={playing}
-          videoId={ "EIX7VHSqsnM"}
+          videoId={ "R4cbB38p_q8"}
           onChangeState={onStateChange}
         />
 
         <Text style={{fontFamily: "OpenSans-SemiBold", fontSize: 20}}> Equipments </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> Bench structure </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> None </Text>
         <Text style={{fontFamily: "OpenSans-SemiBold", fontSize: 20, marginTop: 10}}> Instructions </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 1. Grip the bench as show in the thumbnail of the video, and ensure back and legs are parallel to bench
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 1. Lie face down on a mat with your arms stretched above your head (like Superman)
  </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 2. Lift legs up with the focus on lower back muscles without moving any other body part  </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 3. Lift your legs down and repeat </Text>
-        
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 2. Raise your limbs about 5 to 6 inches off the ground (or as far as you comfortably can) </Text>
+  
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 3. After several breaths, inhale and return to the starting position. The goal should be to hold for 60 seconds. </Text>
       </ScrollView>
     );
   }

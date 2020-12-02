@@ -31,25 +31,25 @@ export default function App({navigation}) {
                         color = "blue"
                     />
             </TouchableOpacity>
-            <Text style={{fontSize: 30, fontFamily: "OpenSans-Bold"}}> Dolphin Kicks </Text>
+            <Text style={{fontSize: 30, fontFamily: "OpenSans-Bold"}}> Dead Bug </Text>
             </View>
 
         <YoutubePlayer
           height={200}
           play={playing}
-          videoId={ "EIX7VHSqsnM"}
+          videoId={ "4XLEnwUr1d8"}
           onChangeState={onStateChange}
         />
 
         <Text style={{fontFamily: "OpenSans-SemiBold", fontSize: 20}}> Equipments </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> Bench structure </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> None </Text>
         <Text style={{fontFamily: "OpenSans-SemiBold", fontSize: 20, marginTop: 10}}> Instructions </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 1. Grip the bench as show in the thumbnail of the video, and ensure back and legs are parallel to bench
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 1. Get into a plank position, making sure to distribute your weight evenly between your hands and your toes.
  </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 2. Lift legs up with the focus on lower back muscles without moving any other body part  </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 3. Lift your legs down and repeat </Text>
-        
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 2. Check your form—your hands should be about shoulder-width apart, back flat, abs engaged, and head in alignment. </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 3. Pull your right knee into your chest as far as you can. </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 4. Switch legs, pulling one knee out and bringing the other knee in.</Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 5. Keep your hips down, run your knees in and out as far and as fast as you can. Alternate inhaling and exhaling with each leg change. </Text>
       </ScrollView>
     );
   }
-  

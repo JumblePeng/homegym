@@ -4,10 +4,28 @@ import {Feather} from '@expo/vector-icons'
 import {Searchbar} from 'react-native-paper'
 
 
+
+
 const HomeSearchBar = props => {
     const [searchQuery, setSearchQuery ] = React.useState('');
     const onChangeSearch = query => setSearchQuery(query);
-    
+    let items = [
+        {name: 'Ab1'},
+        {name: 'Ab2'}
+
+    ]
+
+    const findInArray = (_array,_searchQuery) =>{
+        return _array.find((element) => { 
+            if(element.name === _searchQuery) {
+                s1 = string(element.name)
+            
+            }
+        return s1
+
+            
+        })
+    }
     return(
         <Searchbar style={styles.backgroundStyle}
             placeholder="Search"
@@ -15,6 +33,7 @@ const HomeSearchBar = props => {
             autoCapitalize='none'
             autoCorrect={false}
             value={searchQuery}
+            onChangeSearch  = {()=> this.props.navigation.navigate(findInArray(items,searchQuery))}
         />
     )
 }

@@ -6,15 +6,19 @@ import { Ionicons } from '@expo/vector-icons'
 export default class Back extends Component {
     render(){
         return(
-        <ScrollView>
-            <TouchableOpacity
-                    onPress={()=>this.props.navigation.goBack()}
-                >
-                    <Ionicons
-                        name="ios-arrow-round-back"
-                        size = {70}
-                    />
-            </TouchableOpacity>
+          <ScrollView>
+          <View style={{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
+        <TouchableOpacity
+                  onPress={()=>this.props.navigation.goBack()}
+              >
+                  <Ionicons
+                      name="ios-arrow-round-back"
+                      size = {70}
+                      color = "blue"
+                  />
+          </TouchableOpacity>
+          <Text style={{fontSize: 30, fontFamily: "OpenSans-Bold"}}> Back Workouts </Text>
+          </View>
 
             <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Back1")}>
               <Text style={styles.titleSection}> Pull up </Text>
@@ -24,7 +28,7 @@ export default class Back extends Component {
 
             <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Back2")}>
             <Text style={styles.titleSection}> Reverse Snow Angels </Text>
-            <Image source={require("../Backs/back2.png")} style={styles.Image}>
+            <Image source={require("../Backs/back2.jpg")} style={styles.Image}>
             </Image>
             </TouchableOpacity>
             
@@ -32,6 +36,25 @@ export default class Back extends Component {
               <Text style={styles.titleSection}> Dolphin Kicks  </Text>
               <Image source={require("../Backs/back3.png")} style={styles.Image} ></Image>
             </TouchableOpacity>
+
+            <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Back4")}>
+              <Text style={styles.titleSection}> Superman Hold </Text>
+              <Image source={require("../Backs/back4.jpg")} style={styles.Image} ></Image>
+            </TouchableOpacity>
+            
+            <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Back5")}>
+              <Text style={styles.titleSection}> Pulse Rows </Text>
+              <Image source={require("../Backs/back5.jpg")} style={styles.Image} ></Image>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Back6")}>
+              <Text style={styles.titleSection}> Reverse Plank </Text>
+              <Image source={require("../Backs/back6.jpeg")} style={styles.Image} ></Image>
+            </TouchableOpacity>
+
+            
+
+
         </ScrollView>
         );
     }
@@ -47,14 +70,14 @@ const styles = StyleSheet.create({
         fontSize: 30,
     },
     Image:{
-      height:190,
-      width:190,
+      height:350,
+      width:350,
       resizeMode: 'contain',
       
     },
     image:{
-      height:230,
-      width:230,
+      height:350,
+      width:350,
       resizeMode: 'contain',
       
     }

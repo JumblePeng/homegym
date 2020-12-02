@@ -31,25 +31,24 @@ export default function App({navigation}) {
                         color = "blue"
                     />
             </TouchableOpacity>
-            <Text style={{fontSize: 30, fontFamily: "OpenSans-Bold"}}> Dolphin Kicks </Text>
+            <Text style={{fontSize: 30, fontFamily: "OpenSans-Bold"}}> Pulse Rows </Text>
             </View>
 
         <YoutubePlayer
           height={200}
           play={playing}
-          videoId={ "EIX7VHSqsnM"}
+          videoId={ "ybeHeb4-kh0"}
           onChangeState={onStateChange}
         />
 
         <Text style={{fontFamily: "OpenSans-SemiBold", fontSize: 20}}> Equipments </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> Bench structure </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> None </Text>
         <Text style={{fontFamily: "OpenSans-SemiBold", fontSize: 20, marginTop: 10}}> Instructions </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 1. Grip the bench as show in the thumbnail of the video, and ensure back and legs are parallel to bench
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 1. Lie face down on the ground with your arms angled from your sides and your palms facing the ceiling.
  </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 2. Lift legs up with the focus on lower back muscles without moving any other body part  </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 3. Lift your legs down and repeat </Text>
-        
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 2.Begin by contracting your upper back muscles and squeezing your shoulders together, raising your chest off the floor Press your elbows into the cushioned floor to raise your torso slightly off the ground. </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 3. Pause, and maintaining the contraction, return to the start position under control. </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 4. Be sure to generate the motion in your upper back and not your lower back.</Text>
       </ScrollView>
     );
   }
-  
