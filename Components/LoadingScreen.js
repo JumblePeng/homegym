@@ -1,12 +1,21 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native'
+import {ActivityIndicator, StyleSheet, Text, View} from 'react-native';
 
 export default function LoadingScreen(){
 
-    return(<View style={styles.container}>
-        <Text style={styles.titleSection}> HomeGym </Text>
-        <Text style={styles.subheader}> Your Home Fitness App </Text>
-    </View>)
+    return(
+        <View style={styles.container}>
+            <Text style={{fontSize: 20,
+                        fontFamily: "OpenSans-Reg",
+                        color: "#FFFFFF",
+                        borderRadius: 10,
+                        paddingVertical: 10,
+                        paddingHorizontal: 12,
+                        backgroundColor: "#96C5BD",
+                        marginBottom: 10}}>   Loading... </Text>
+            <ActivityIndicator size="large" color="#0000ff" />
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
@@ -16,10 +25,4 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#96C5BD'
     },
-    titleSection:{
-        fontSize: 30,
-    },
-    subheader:{
-        fontSize: 22,
-    }
 })
