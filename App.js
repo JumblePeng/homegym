@@ -1,94 +1,46 @@
-import React, {Component} from 'react'
-import { Text, View, StyleSheet, Button, Alert } from 'react-native';
-import * as Facebook from 'expo-facebook';
-import LoadingScreen from './Components/LoadingScreen'
+import React, {Component, useState} from 'react'
+import FacebookSignIn from './Components/FacebookSignIn'
 import AppScreen from './Components/AppScreen'
-import * as SecureStore from 'expo-secure-store';
+import SignIn from './Components/SignIn'
+import SignUp from './Components/SignUp'
 
-export default class App extends Component {
-  constructor() {
-    super();
-    this.state = { loading: true, token: null };
+import {createStackNavigator} from '@react-navigation/stack'
+import { NavigationContainer } from '@react-navigation/native'
+
+import { AppLoading } from 'expo';
+import * as Font from 'expo-font';
+
+
+const fetchFont = () => {
+  return Font.loadAsync({
+    'OpenSans-Reg': require('./assets/fonts/OpenSans-Regular.ttf'),
+    'OpenSans-SemiBold': require('./assets/fonts/OpenSans-SemiBold.ttf'),
+    'OpenSans-Bold': require('./assets/fonts/OpenSans-Bold.ttf'),
+  });
+};
+
+const RootStack = createStackNavigator()
+
+export default function App () {
+  const [fontLoaded, setfontLoaded] = useState(false);
+  if(!fontLoaded){
+    return ( 
+      <AppLoading startAsync={fetchFont}
+        onError = {() => console.log("ERROR")}
+        onFinish= {() => {
+        setfontLoaded(true)
+        }}
+      />
+    );
   }
 
-  componentDidMount(){
-   setTimeout (()=>{this.checkForToken()},500)
-  }
-
-
-  //Check Async Storage if token is available
-  //If it is available set loading state to false 
-  async checkForToken(){
-     let token = await SecureStore.getItemAsync('token1')
-     console.log(token)
-    this.setState({
-      token: token,
-      loading: false
-    })
-  }
-
-  //Write token to secure storage. 
-  async saveTokenToSecureStorage(token){
-     SecureStore.setItemAsync("token2", token)
-     this.setState({
-       token: token
-     })
-  }
-
-
-  render() {
-    if(this.state.loading === true){
-      return(<LoadingScreen/>)
-    }else if(this.state.token === null){
-    return (
-        <AppScreen/>
-        
-        /*
-        <View style={styles.container}>
-          <Button title="LogIn With Facebook" onPress={() => this.logIn()} />
-        </View>*/
-        
-      );
-    }
-    else{
-      return(<AppScreen/>)
-    }
-  }
-
-  async logIn() {
-    try {
-      //Seed documentation on course site at mobileappdev.teachable.com
-      //For default user names and passwords.
-      await Facebook.initializeAsync({
-        appId: '3439564352787812',
-      });
-      const {
-        type,
-        token,
-        expires,
-        permissions,
-        declinedPermissions,
-      } = await Facebook.logInWithReadPermissionsAsync({
-        permissions: ['public_profile'],
-      });
-      if (type === 'success') {
-        // Get the user's name using Facebook's Graph API
-        const response = await fetch(`https://graph.facebook.com/me?access_token=${token}`);
-        this.saveTokenToSecureStorage(token)
-        //Alert.alert('Logged in!', `Hi ${(await response.json()).name}!`);
-      } else {
-        // type === 'cancel'
-      }
-    } catch ({ message }) {
-      alert(`Facebook Login Error: ${message}`);
-    }
-  }
+    return(
+      <NavigationContainer>
+        <RootStack.Navigator initialRouteName="SignIn">
+            <RootStack.Screen name="SignIn" component = {SignIn} options={{ title: 'Sign In Screen'}} />
+            <RootStack.Screen name="SignUp" component = {SignUp} options={{ title: 'Sign Up'}} />
+            <RootStack.Screen name="AppScreen" component = {AppScreen} options={{ title: 'HomeGym'}} />
+        </RootStack.Navigator> 
+      </NavigationContainer>
+    )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
