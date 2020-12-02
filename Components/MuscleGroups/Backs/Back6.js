@@ -31,25 +31,24 @@ export default function App({navigation}) {
                         color = "blue"
                     />
             </TouchableOpacity>
-            <Text style={{fontSize: 30, fontFamily: "OpenSans-Bold"}}> Dolphin Kicks </Text>
+            <Text style={{fontSize: 30, fontFamily: "OpenSans-Bold"}}> Reverse Plank </Text>
             </View>
 
         <YoutubePlayer
           height={200}
           play={playing}
-          videoId={ "EIX7VHSqsnM"}
+          videoId={ "ZNAxdJ6Bt00"}
           onChangeState={onStateChange}
         />
 
         <Text style={{fontFamily: "OpenSans-SemiBold", fontSize: 20}}> Equipments </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> Bench structure </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> None </Text>
         <Text style={{fontFamily: "OpenSans-SemiBold", fontSize: 20, marginTop: 10}}> Instructions </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 1. Grip the bench as show in the thumbnail of the video, and ensure back and legs are parallel to bench
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 1. Press into your palms and lift your hips and torso toward the ceiling. 
  </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 2. Lift legs up with the focus on lower back muscles without moving any other body part  </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 3. Lift your legs down and repeat </Text>
-        
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 2.Look up to the ceiling, point your toes, and keep your arms and legs straight.  </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 3. Keep your entire body strong and form a straight line from your head to your heels. </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 4. Squeeze your core and try to pull your belly button back toward your spine.</Text>
       </ScrollView>
     );
   }
-  

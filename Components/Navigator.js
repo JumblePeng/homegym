@@ -14,10 +14,17 @@ import Legs from './MuscleGroups/Legs/Legs'
 import Ab1 from './MuscleGroups/Abdominals/Ab1'
 import Ab2 from './MuscleGroups/Abdominals/Ab2'
 import Ab3 from './MuscleGroups/Abdominals/Ab3'
+import Ab4 from './MuscleGroups/Abdominals/Ab4'
+import Ab5 from './MuscleGroups/Abdominals/Ab5'
+import Ab6 from './MuscleGroups/Abdominals/Ab6'
 
 import Back1 from './MuscleGroups/Backs/Back1'
 import Back2 from './MuscleGroups/Backs/Back2'
 import Back3 from './MuscleGroups/Backs/Back3'
+import Back4 from './MuscleGroups/Backs/Back4'
+import Back5 from './MuscleGroups/Backs/Back5'
+import Back6 from './MuscleGroups/Backs/Back6'
+
 
 import Bicep1 from './MuscleGroups/Arms/Bicep1'
 import Bicep2 from './MuscleGroups/Arms/Bicep2'
@@ -65,10 +72,16 @@ export default class Navigator extends Component {
                     <RootStack.Screen name="Ab1" component={Ab1} />
                     <RootStack.Screen name="Ab2" component={Ab2} />
                     <RootStack.Screen name="Ab3" component={Ab3} />
+                    <RootStack.Screen name="Ab4" component={Ab4} />
+                    <RootStack.Screen name="Ab5" component={Ab5} />
+                    <RootStack.Screen name="Ab6" component={Ab6} />
 
                     <RootStack.Screen name="Back1" component={Back1} />
                     <RootStack.Screen name="Back2" component={Back2} />
                     <RootStack.Screen name="Back3" component={Back3} />
+                    <RootStack.Screen name="Back4" component={Back4} />
+                    <RootStack.Screen name="Back5" component={Back5} />
+                    <RootStack.Screen name="Back6" component={Back6} />
 
                     <RootStack.Screen name="Bicep1" component={Bicep1} />
                     <RootStack.Screen name="Bicep2" component={Bicep2} />

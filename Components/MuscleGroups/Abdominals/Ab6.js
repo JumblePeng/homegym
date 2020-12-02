@@ -31,25 +31,24 @@ export default function App({navigation}) {
                         color = "blue"
                     />
             </TouchableOpacity>
-            <Text style={{fontSize: 30, fontFamily: "OpenSans-Bold"}}> Dolphin Kicks </Text>
+            <Text style={{fontSize: 30, fontFamily: "OpenSans-Bold"}}> Side plank </Text>
             </View>
 
         <YoutubePlayer
           height={200}
           play={playing}
-          videoId={ "EIX7VHSqsnM"}
+          videoId={ "K2VljzCC16g"}
           onChangeState={onStateChange}
         />
 
         <Text style={{fontFamily: "OpenSans-SemiBold", fontSize: 20}}> Equipments </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> Bench structure </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> None </Text>
         <Text style={{fontFamily: "OpenSans-SemiBold", fontSize: 20, marginTop: 10}}> Instructions </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 1. Grip the bench as show in the thumbnail of the video, and ensure back and legs are parallel to bench
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 1. Lie on your right side, legs extended and stacked from hip to feet. The elbow of your right arm is directly under your shoulder. Ensure your head is directly in line with your spine. Your left arm can be aligned along the left side of your body..
  </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 2. Lift legs up with the focus on lower back muscles without moving any other body part  </Text>
-        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 3. Lift your legs down and repeat </Text>
-        
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 2. Engage your abdominal muscles, drawing your navel toward your spine. </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 3. Lift your hips and knees from the mat while exhaling. Your torso is straight in line with no sagging or bending. Hold the position. </Text>
+        <Text style={{fontFamily: "OpenSans-Reg", fontSize: 20, marginTop: 10}}> 4. After several breaths, inhale and return to the starting position. The goal should be to hold for 60 seconds. Change sides and repeat.</Text>
       </ScrollView>
     );
   }
-  
