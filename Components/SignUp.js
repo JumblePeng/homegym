@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Button, TouchableOpacity, Dimensions, Platform, TextInput, StatusBar} from 'react-native';
+import {View, Text, StyleSheet, Button, TouchableOpacity, Dimensions, Platform, TextInput, StatusBar, Alert} from 'react-native';
 
 import * as Animatable from 'react-native-animatable';
 import {LinearGradient} from 'expo-linear-gradient';
@@ -166,12 +166,20 @@ const SignIn = ({navigation}) => {
                 </View>
 
                 <View style={styles.button}>
-                    <LinearGradient
-                        colors={['#08d4c4', '#01ab9d']}
-                        style={styles.signIn}
+                    <TouchableOpacity
+                        onPress={() => Alert.alert('Welcome!', 'Proceed to Sign In')}
+                        style={[styles.signIn, {
+                            borderColor: "#009387",
+                            borderWidth: 1,
+                        }]}
                     >
-                        <Text style={[styles.textSign, {color: '#fff'}]}>Sign Up</Text>
-                    </LinearGradient>
+                        <LinearGradient
+                            colors={['#08d4c4', '#01ab9d']}
+                            style={styles.signIn}
+                        >
+                            <Text style={[styles.textSign, {color: '#fff'}]}>Sign Up</Text>
+                        </LinearGradient>
+                    </TouchableOpacity>
 
                     <TouchableOpacity
                         onPress={() => navigation.navigate("SignIn")}
@@ -245,7 +253,7 @@ const styles = StyleSheet.create({
     },
     button: {
         alignItems: 'center',
-        marginTop: 50
+        marginTop: 20
     },
     signIn: {
         width: '100%',

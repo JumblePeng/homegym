@@ -12,22 +12,10 @@ const HomeSearchBar = props => {
         <Searchbar style={styles.backgroundStyle}
             placeholder="Search"
             onChangeText={onChangeSearch}
+            autoCapitalize='none'
+            autoCorrect={false}
             value={searchQuery}
         />
-
-        /*<View style={styles.backgroundStyle}>
-            <Feather name='search' size = {32} />
-            <TextInput
-                style={styles.inputStyle}
-                placeholder='Search'
-                onChangeText={
-                    newTerm => props.onNewText(newTerm)
-                }
-                autoCapitalize='none'
-                autoCorrect={false}
-                onEndEditing={() => props.onDoneText()}
-            />
-        </View>*/
     )
 }
 
