@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
   Text,
   View,
-  StyleSheet
+  StyleSheet,
+  TouchableOpacity
 } from 'react-native';
 import {Agenda} from 'react-native-calendars';
 
@@ -11,32 +12,32 @@ export default class AgendaScreen extends Component {
     super(props);
     this.state = {
       items: {
-        '2020-12-02': [{name: 'Abs'}],
+        '2020-12-02': [{name: 'Abdominals'}],
         '2020-12-03': [{name: 'Shoulders'}],
         '2020-12-04': [{name: 'Glutes'}],
         '2020-12-06': [{name: 'Back'}],
         '2020-12-07': [{name: 'Arms'}],
-        '2020-12-09': [{name: 'Chest'}],
-        '2020-12-10': [{name: 'Abs'}],
+        '2020-12-09': [{name: 'Chests'}],
+        '2020-12-10': [{name: 'Abdominals'}],
         '2020-12-11': [{name: 'Shoulders'}],
         '2020-12-12': [{name: 'Glutes'}],
         '2020-12-14': [{name: 'Back'}],
         '2020-12-15': [{name: 'Arms'}],
-        '2020-12-17': [{name: 'Chest'}],
-        '2020-12-18': [{name: 'Abs'}],
+        '2020-12-17': [{name: 'Chests'}],
+        '2020-12-18': [{name: 'Abdominals'}],
         '2020-12-19': [{name: 'Shoulders'}],
         '2020-12-20': [{name: 'Glutes'}],
         '2020-12-22': [{name: 'Back'}],
         '2020-12-23': [{name: 'Arms'}],
-        '2020-12-27': [{name: 'Abs'}],
+        '2020-12-27': [{name: 'Abdominals'}],
         '2020-12-28': [{name: 'Glutes'}],
-        '2020-12-29': [{name: 'Chest'}],
-        '2021-01-03': [{name: 'Abs'}],
+        '2020-12-29': [{name: 'Chests'}],
+        '2021-01-03': [{name: 'Abdominals'}],
         '2021-01-03': [{name: 'Shoulders'}],
         '2021-01-04': [{name: 'Glutes'}],
         '2021-01-06': [{name: 'Back'}],
         '2021-01-07': [{name: 'Arms'}],
-        '2021-01-09': [{name: 'Chest'}],
+        '2021-01-09': [{name: 'Chests'}],
       }
     };
   }
@@ -89,7 +90,12 @@ export default class AgendaScreen extends Component {
 
   renderItem(item) {
     return (
-      <View style={[styles.item, {height: item.height}]}><Text>{item.name}</Text></View>
+      <View style={[styles.item, {height: item.height}]}>
+        <TouchableOpacity onPress={()=>this.props.navigation.navigate(item.name)}>
+          <Text>{item.name}</Text>
+        </TouchableOpacity>
+      </View>
+
     );
   }
 
