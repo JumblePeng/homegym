@@ -7,6 +7,7 @@ import HomeScreen from './HomeScreen'
 import Navigator from './Navigator'
 import CalendarTask from './CalendarTask'
 import Profile from './Profile'
+import HomeSearchBar from './HomeScreen/HomeSearchBar'
 
 const RootStack = createBottomTabNavigator()
 
@@ -19,6 +20,8 @@ export default class AppScreen extends Component {
               let iconName 
               if(route.name === "Home"){
                 iconName = "ios-home"
+              }else if(route.name === "Search"){
+                iconName = "md-search"
               }else if(route.name === "Muscle Groups"){
                 iconName = "ios-body"
               }else if(route.name === "Calendar"){
@@ -36,6 +39,7 @@ export default class AppScreen extends Component {
         }}
         initialRouteName="Home">
           <RootStack.Screen name="Home" component={HomeScreen} />
+          <RootStack.Screen name="Search" component={HomeSearchBar} />
           <RootStack.Screen name="Muscle Groups" component={Navigator} />
           <RootStack.Screen name="Calendar" component={CalendarTask} />
 

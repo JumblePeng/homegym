@@ -31,7 +31,7 @@ export default function App({navigation}) {
                         color = "blue"
                     />
             </TouchableOpacity>
-            <Text style={{fontSize: 30, fontFamily: "OpenSans-Bold"}}> Dead Bug </Text>
+            <Text style={{fontSize: 30, fontFamily: "OpenSans-Bold"}}> Russian Twists </Text>
             </View>
 
         <YoutubePlayer
