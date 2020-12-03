@@ -7,7 +7,7 @@ export default class HomeScreen extends Component {
     render() {
       return(
         <View style={styles.container}>
-            <HomeSearchBar/>
+            <Text style={{fontFamily: "OpenSans-Bold", fontSize: 28, marginBottom: 10}}> Your Home Fitness App </Text>
 
             <TouchableOpacity 
               onPress = {()=> this.props.navigation.navigate("Muscle Groups")}>
