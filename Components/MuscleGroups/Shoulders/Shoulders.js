@@ -7,14 +7,18 @@ export default class Shoulders extends Component {
     render(){
         return(
         <ScrollView>
+          <View style={{flex: 1, flexDirection: 'row', alignItems: 'center'}}>
           <TouchableOpacity
                     onPress={()=>this.props.navigation.goBack()}
                 >
                     <Ionicons
                         name="ios-arrow-round-back"
                         size = {70}
+                        color = "blue"
                     />
             </TouchableOpacity>
+            <Text style={{fontSize: 30, fontFamily: "OpenSans-Bold"}}> Shoulder Workouts </Text>
+            </View>
             
             <TouchableOpacity onPress = {()=> this.props.navigation.navigate("Shoulder1")}>
               <Text style={styles.titleSection}> Shoulder Press </Text>
